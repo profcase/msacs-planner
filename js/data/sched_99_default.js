@@ -1,0 +1,20 @@
+const sched_99_default = [
+  { "element": "d98", "container": "unscheduled" },
+  { "element": "d99", "container": "unscheduled" },
+  { "element": "c01", "container": "freshman-fall" },
+  { "element": "c02", "container": "freshman-fall" },
+  { "element": "c03", "container": "freshman-fall" },
+  { "element": "c04", "container": "freshman-fall" },
+  { "element": "c05", "container": "freshman-spring" },
+  { "element": "c06", "container": "freshman-spring" },
+  { "element": "c07", "container": "freshman-spring" },
+  { "element": "c08", "container": "freshman-spring" },
+  { "element": "d03", "container": "sophomore-fall" },
+  { "element": "d04", "container": "sophomore-fall" },
+  { "element": "d05", "container": "sophomore-fall" },
+  { "element": "d06", "container": "sophomore-fall" },
+  { "element": "c09", "container": "sophomore-fall" },
+  { "element": "d07", "container": "sophomore-spring" },
+  { "element": "c10", "container": "sophomore-spring" },
+  { "element": "c11", "container": "sophomore-spring" }
+];

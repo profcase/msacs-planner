@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="author" content="Denise Case">
+  <meta name="description" content="Northwest Missouri State University MS Applied Computer Science Degree Planner">
+  <meta name="msapplication-TileColor" content="#006747">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#006747">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>NW MS-ACS Degree Planner</title>
+
+  <link rel="canonical" href="https://nwcs-degree-planner.firebaseapp.com/">
+  <link rel="manifest" href="/manifest.json">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="./images/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="./images/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="./images/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./images/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./images/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./images/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./images/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./images/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./images/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./images/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/icons/favicon-16x16.png">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="css/dragula.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+
+  <!-- Use async loading if available. -->
+  <link rel="preload" href="css/main.css" as="style" onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="css/main.css">
+  </noscript>
+
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <header class="header">
+    <h1 class="header__title">
+      <img src="./images/icons/rsz_n60-2stack-w_small.png" alt="Northwest logo" />BS-CS Planner</h1>
+    <button id="btnDefault" class="headerButton" aria-label="Reset" title="Reset to default schedule">Default</button>
+    <button id="btnRestore" class="headerButton" aria-label="Restore" title="Restore schedule">Restore</button>
+    <button id="btnUnschedule" class="headerButton" aria-label="Clear" title="Unschedule all courses">Unschedule</button>
+  </header>
+
+  <main>
+
+    <aside class="side unscheduled">
+      <section>
+        <h2>Unscheduled</h2>
+        <div class="year">
+          <div class="term zero">
+            <div class="container" id="unscheduled">
+              <div class="req degree" id="d98"> Sample Course (drag me) </div>
+              <div class="req degree" id="d99"> D99: Internship (recommended) </div>
+            </div>
+            <h4 class="hours" id="unscheduled-hours"></h4>
+          </div>
+        </div>
+      </section>
+    </aside>
+
+    <article class="side scheduled">
+      <section>
+        <h2>Year 1</h2>
+        <div class="year">
+          <div class="term freshman">
+            <h3>Fall</h3>
+            <div class="container" id="freshman-fall">
+              <div class="req core" id="c01"> C01: 44-542 OOP</div>
+              <div class="req core" id="c02"> C02: 44-563 Webapps</div>
+              <div class="req core" id="c03"> C03: 44-560 ADB</div>
+              <div class="req core" id="c04"> C04: Network Prereq </div>
+              </div>
+            <h4 class="hours" id="freshman-fall-hours"></h4>
+          </div>
+          <div class="term freshman">
+            <h3>Spring</h3>
+            <div class="container" id="freshman-spring">
+              <div class="req core" id="c05"> C05: 10-112 Comp II 3</div>
+              <div class="req core" id="c06"> C06: 29-102 Oral Comm 3 </div>
+              <div class="req core" id="c07"> C07: Life Science & Lab 4 </div>
+              <div class="req core" id="c08"> C08: Fine Arts 3 </div>
+              </div>
+            <h4 class="hours" id="freshman-spring-hours"></h4>
+          </div>
+          <div class="term freshman">
+            <h3>Summer</h3>
+            <div class="container summer" id="freshman-summer">
+            </div>
+            <h4 class="hours" id="freshman-summer-hours"></h4>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Year 2</h2>
+
+        <div class="year">
+          <div class="term sophomore">
+            <h3>Fall</h3>
+            <div class="container" id="sophomore-fall">
+              <div class=" req core " id="c09"> C09: Physical Science & Lab 4 </div>
+              <div class="req degree" id="d03"> D03: 44-356 Network Fundamentals 3</div>
+              <div class="req degree critical" id="d04"> D04: 44-242 Data Structures 3</div>
+              <div class="req degree" id="d05"> D05: 44-296 Professional Dev Seminar (F) 3</div>
+              <div class="req degree" id="d06"> D06: A 17-120 Calc | B 17-114 Gen Stats 3</div>
+            </div>
+            <h4 class="hours" id="sophomore-fall-hours"></h4>
+          </div>
+          <div class="term sophomore">
+            <h3>Spring</h3>
+            <div class="container " id="sophomore-spring">
+              <div class=" req core " id="c10"> C10: PoliSci/American Gov or Exp 3 </div>
+              <div class=" req core " id="c11"> C11: Hum/Phil/Western Experiences 3 </div>
+              <div class="req degree" id="d07"> D07: 44-460 Database Systems 3</div>
+             </div>
+            <h4 class="hours" id="sophomore-spring-hours"></h4>
+          </div>
+          <div class="term sophomore">
+            <h3>Summer</h3>
+            <div class="container summer" id="sophomore-summer">
+            </div>
+            <h4 class="hours" id="sophomore-summer-hours"></h4>
+          </div>
+        </div>
+      </section>        
+    </article>
+  </main>
+  <footer>&copy; 2018 Denise Case
+    <p>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer">
+          <img style="border:0;width:88px;height:31px"
+              src="http://jigsaw.w3.org/css-validator/images/vcss"
+              alt="Valid CSS!" />
+      </a>
+  </p>
+       
+            
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js"></script>
+  <script>
+    // Initialize Firebase
+    
+  </script>
+
+  <script src="js/vendor/modernizr-3.6.0.min.js "></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+    crossorigin="anonymous"></script>
+  <script async src="js/plugins.js "></script>
+  <script async src="js/vendor/dragula.min.js "></script>
+  <script async src="js/data/termList.js "></script>
+  <script async src="js/data/sched_00_unscheduled.js "></script>
+  <script async src="js/data/sched_99_default.js "></script>
+  <script async src="js/data/sched_01_fallstart.js "></script>
+  <script async src="js/data/sched_02_springstart.js "></script>
+  <script async src="js/main.js "></script>
+
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-65828104-1', 'auto'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js " async defer></script>
+</body>
+
+</html>

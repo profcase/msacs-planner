@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial,  sans-serif;
+  background-color: #ececec;
+  color: white;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 60px;
+  height: auto;
+}
+
+header {
+  padding: 10px;
+  background-color: #006747;
+  color: #fff;
+  text-align: left;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 2px 9px 1px rgba(0, 0, 0, 0.12), 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  display:flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer {
+  padding: 20px;
+  background-color: #006747;
+  color: #fff;
+  text-align: left;
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+button {
+  background: #006747;
+  background-image: linear-gradient(to bottom, #019264, #006747);
+  border-radius: 4px;
+  color: #ffffff;
+  padding: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+button:hover {
+  background: #006747;
+  background-image: linear-gradient(to bottom, #c6dda0, #006747);
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  color: #444;
+}
+
+.side {
+  background-color: #006747;
+  color: #fff;
+  padding: 15px;
+  margin: 10px;
+}
+
+.unscheduled {
+  flex-grow: 1;
+}
+
+.scheduled {
+  flex-grow: 1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin: 5px;
+  min-height: 50px;
+}
+
+.years {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.year {
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.term {
+  flex-grow: 1;
+  padding-top: 10px;
+  margin: 3px;
+  border-radius: 25px;
+}
+
+.zero {
+  background-color: rgb(141, 141, 141);
+}
+
+.freshman {
+  background-color: rgb(141, 141, 141);
+}
+
+.sophomore {
+  background-color: #aaa;
+}
+
+.junior {
+  background-color: #bbb;
+}
+
+.senior {
+  background-color: #ccc;
+}
+
+h3, h4 {
+  margin: 15px;
+}
+
+.hour {
+  align-self: flex-end;
+}
+
+.req {
+  color: #006747;
+  margin: 5px;
+  padding: 2px;
+  transition: opacity 0.4s ease-in-out;
+  cursor: move;
+  cursor: grab;
+  max-width: 250px;
+}
+
+.core {
+  background-color: lightgoldenrodyellow
+}
+
+.degree {
+  background-color: white;
+}
+
+.ex-over {
+  background-color: #006747;
+}
+
+.ex-moved {
+  background-color: yellow;
+  transition: color .5s ease-in-out
+}
+
+.hidden {
+  display: none !important;
+}
+
+.invisible {
+  visibility: hidden;
+}
